@@ -14,3 +14,14 @@ class Comment
         return $"{Author}: {Text}";
     }
 }
+
+// Explaining Override ToString()
+
+// Comment comment = new Comment("Alice", "Great explanation!");
+// Console.WriteLine(comment);
+
+// Standard output would be: 
+// CommentNamespace.Comment
+
+// If I use Override ToString() the Output will be:
+// Alice: Great explanation!

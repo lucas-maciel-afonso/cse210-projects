@@ -2,7 +2,7 @@ class Video
 {
     public string Title { get; set; }
     public string Author { get; set; }
-    public int Length { get; set; } // in seconds
+    public int Length { get; set; }
     private List<Comment> Comments { get; set; }
 
     public Video(string title, string author, int length)
@@ -23,6 +23,7 @@ class Video
         return Comments.Count;
     }
 
+// I do not remember if such a method was requested, but looks reasonable to have it
     public void DisplayVideoInfo()
     {
         Console.WriteLine($"Title: {Title}");
