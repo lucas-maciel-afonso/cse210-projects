@@ -1,6 +1,6 @@
 class ListingActivity : Activity
 {
-    private string[] Prompts = {
+    private string[] _prompts = {
         "Who are people that you appreciate?",
         "What are personal strengths of yours?",
         "Who are people that you have helped this week?",
@@ -16,7 +16,7 @@ class ListingActivity : Activity
     {
         StartMessage();
         Random random = new Random();
-        Console.WriteLine(Prompts[random.Next(Prompts.Length)]);
+        Console.WriteLine(_prompts[random.Next(_prompts.Length)]);
         PrepareToBegin();
 
         DateTime startTime = DateTime.Now;

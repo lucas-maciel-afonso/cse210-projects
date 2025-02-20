@@ -1,6 +1,6 @@
 class BodyScanActivity : Activity
 {
-    private string[] BodyParts = {
+    private string[] _bodyParts = {
         "feet", "calves", "thighs", "hips", "lower back", "upper back", "chest", "shoulders", "arms", "hands", "neck", "face", "head"
     };
 
@@ -17,10 +17,10 @@ class BodyScanActivity : Activity
         DateTime futureTime = startTime.AddSeconds(Duration);
 
         int index = 0;
-        while (DateTime.Now < futureTime && index < BodyParts.Length)
+        while (DateTime.Now < futureTime && index < _bodyParts.Length)
         {
-            Console.WriteLine($"Focus on your {BodyParts[index]}. Notice any sensations, tension, or relaxation.");
-            PauseWithAnimation(5); 
+            Console.WriteLine($"Focus on your {_bodyParts[index]}. Notice any sensations, tension, or relaxation.");
+            PauseWithAnimation(5);
             index++;
         }
 

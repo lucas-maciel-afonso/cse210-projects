@@ -1,6 +1,6 @@
 class ReflectionActivity : Activity
 {
-    private string[] Prompts = {
+    private string[] _prompts = {
         "Think of a time when you stood up for someone else.",
         "Think of a time when you did something really difficult.",
         "Think of a time when you helped someone in need.",
@@ -27,7 +27,7 @@ class ReflectionActivity : Activity
     {
         StartMessage();
         Random random = new Random();
-        Console.WriteLine(Prompts[random.Next(Prompts.Length)]);
+        Console.WriteLine(_prompts[random.Next(_prompts.Length)]);
         PrepareToBegin();
 
         DateTime startTime = DateTime.Now;
